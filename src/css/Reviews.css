@@ -1,0 +1,154 @@
+/* =========================
+   Resuma — Reviews.css
+   Blue • White • Clean
+   ========================= */
+:root{
+  --blue-700:#1d4ed8;
+  --blue-600:#2563eb;
+  --blue-500:#3b82f6;
+  --blue-100:#e0f2fe;
+  --ink:#0f172a;
+  --muted:#475569;
+  --card:#ffffff;
+  --bd:rgba(15,23,42,.10);
+  --radius:16px;
+  --shadow:0 14px 28px rgba(15,23,42,.08);
+  --maxw:1000px;
+}
+
+.container__reviews{
+  background: linear-gradient(180deg, #f0f9ff, #ffffff);
+  color: var(--ink);
+  padding: clamp(24px,4vw,48px) 16px;
+}
+
+.hero__reviews{
+  max-width: var(--maxw);
+  margin: 0 auto 10px;
+  text-align: center;
+}
+.title__reviews{
+  margin: 0 0 6px;
+  font-size: clamp(22px, 4vw, 34px);
+  font-weight: 900;
+}
+.subtitle__reviews{
+  margin: 0 auto;
+  max-width: 60ch;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.showcase__reviews{
+  max-width: var(--maxw);
+  margin: 16px auto 0;
+}
+
+.reviews-display{
+  position: relative;
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+}
+
+/* Card */
+.review-card{
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(16px, 3vw, 24px);
+  max-width: 780px;
+  width: 100%;
+  text-align: center;
+  transition: transform .18s ease, box-shadow .22s ease, border-color .2s ease;
+}
+.review-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(37,99,235,.16);
+  border-color: rgba(37,99,235,.25);
+}
+
+/* Stars */
+.review-rating{
+  display: inline-flex;
+  gap: 4px;
+  color: var(--blue-600);
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+/* Quote & meta */
+.review-quote{
+  margin: 6px 0 10px;
+  font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--ink);
+  font-weight: 700;
+}
+.review-divider{
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(37,99,235,.25), transparent);
+  margin: 8px auto;
+  width: 60%;
+}
+.review-author{
+  display: block;
+  font-weight: 800;
+}
+.review-locale{
+  display: block;
+  color: var(--muted);
+}
+
+/* Controls */
+.review-controls{
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 780px;
+}
+
+.prev-btn, .next-btn{
+  appearance: none; border: 0; cursor: pointer;
+  width: 40px; height: 40px; border-radius: 10px;
+  background: #fff; color: var(--ink);
+  border: 1px solid var(--bd);
+  box-shadow: var(--shadow);
+  font-size: 20px; line-height: 1;
+  transition: transform .15s, background .2s, box-shadow .2s;
+}
+.prev-btn:hover, .next-btn:hover{
+  transform: translateY(-1px);
+  background: var(--blue-100);
+  box-shadow: 0 12px 22px rgba(37,99,235,.18);
+}
+
+/* Dots */
+.dots{
+  display: flex; justify-content: center; align-items: center; gap: 8px;
+}
+.dot{
+  width: 10px; height: 10px; border-radius: 999px;
+  background: rgba(37,99,235,.25); border: 0;
+  cursor: pointer;
+  transition: transform .15s, background .2s;
+}
+.dot.is-active{
+  background: var(--blue-600);
+  transform: scale(1.25);
+}
+.dot:focus-visible,
+.prev-btn:focus-visible,
+.next-btn:focus-visible{
+  outline: 2px solid var(--blue-600);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 560px){
+  .review-divider{ width: 80% }
+}

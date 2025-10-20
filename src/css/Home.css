@@ -1,0 +1,126 @@
+/* ================================
+   Resume Builder — Home.css
+   Blue • White • Modern SaaS Vibe
+   ================================ */
+:root {
+  --blue-500: #2563eb;
+  --blue-400: #3b82f6;
+  --blue-200: #bfdbfe;
+  --text-dark: #0f172a;
+  --text-light: #f8fafc;
+  --gray-100: #f1f5f9;
+  --radius: 12px;
+  --shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Container */
+.container__home {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--blue-50, #f0f9ff), var(--gray-100));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero Section */
+.hero__home {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+}
+
+/* Hero Text */
+.hero__info {
+  flex: 1 1 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title__hero .title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--text-dark);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: #475569;
+  font-size: 1.1rem;
+  max-width: 40ch;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Newsletter (CTA) */
+.newsletter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.newsletter-container input {
+  flex: 1 1 250px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--blue-200);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.newsletter-container input:focus {
+  border-color: var(--blue-400);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.subscribe-btn {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(90deg, var(--blue-500), var(--blue-400));
+  color: white;
+  font-weight: 600;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.subscribe-btn:hover {
+  background: linear-gradient(90deg, var(--blue-600, #1d4ed8), var(--blue-400));
+  transform: translateY(-2px);
+}
+
+/* Image Container */
+.img-container {
+  flex: 1 1 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero__home {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .newsletter-container {
+    justify-content: center;
+  }
+
+  .img-container img {
+    max-width: 90%;
+    margin-bottom: 1.5rem;
+  }
+}

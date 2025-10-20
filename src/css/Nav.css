@@ -1,0 +1,124 @@
+/* ================================
+   Resuma — Nav.css (Blue • White)
+   ================================ */
+:root{
+  --blue-600:#1d4ed8;
+  --blue-500:#2563eb;
+  --blue-400:#3b82f6;
+  --blue-100:#dbeafe;
+  --ink:#0f172a;
+  --muted:#475569;
+  --bg:#f8fafc;
+  --glass:rgba(255,255,255,.7);
+  --bd:rgba(15,23,42,.08);
+  --radius:12px;
+  --shadow:0 10px 24px rgba(15,23,42,.08);
+}
+
+.container__nav{
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: saturate(140%) blur(10px);
+  background: linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.72));
+  border-bottom: 1px solid var(--bd);
+}
+
+.title__nav{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Brand */
+.title-text{
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: .2px;
+  font-size: 1.1rem;
+  background: linear-gradient(90deg, var(--blue-600), var(--blue-400));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* Desktop links */
+.links__nav{
+  margin-left: 12px;
+  display: none;                 /* mobile first */
+  gap: 14px;
+}
+.links__nav a{
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: color .2s, background .2s, transform .15s;
+}
+.links__nav a:hover,
+.links__nav a:focus-visible{
+  color: var(--ink);
+  background: var(--blue-100);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+/* Kebab / mobile tray */
+.hamburger-menu-btn{
+  margin-left: auto;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--bd);
+  background: #fff;
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform .15s ease;
+}
+.hamburger-menu-btn:hover{ transform: translateY(-1px); }
+
+.supple-links{
+  position: absolute; right: 16px; top: 58px;
+  display: none;
+  background: var(--glass);
+  border: 1px solid var(--bd);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 8px;
+  backdrop-filter: blur(10px);
+}
+.supple-links.is-open{ display: grid; grid-auto-flow: column; gap: 8px; }
+.supple-links a{
+  display: inline-grid; place-items: center;
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--bd);
+  text-decoration: none;
+  transition: background .2s, transform .15s;
+}
+.supple-links a:hover,
+.supple-links a:focus-visible{
+  background: var(--blue-100);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+/* Desktop breakpoint */
+@media (min-width: 860px){
+  .links__nav{ display: flex; }
+  .hamburger-menu-btn{ display: none; }
+  .supple-links{ display: none !important; }
+}
+
+/* Anchor scroll offset for sticky nav */
+:where(section[id]){ scroll-margin-top: 72px; }
+
+/* A11y focus */
+:where(a,button).focus-visible,
+:where(a,button):focus-visible{
+  outline: 2px solid var(--blue-500);
+  outline-offset: 2px;
+  border-radius: 10px;
+}

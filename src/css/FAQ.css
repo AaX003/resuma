@@ -1,0 +1,110 @@
+/* =========================
+   Resuma — FAQ.css
+   ========================= */
+:root{
+  --blue-700:#1d4ed8;
+  --blue-600:#2563eb;
+  --blue-500:#3b82f6;
+  --blue-100:#e0f2fe;
+  --ink:#0f172a;
+  --muted:#475569;
+  --card:#ffffff;
+  --bd:rgba(15,23,42,.10);
+  --radius:14px;
+  --shadow:0 14px 28px rgba(15,23,42,.08);
+  --maxw:900px;
+}
+
+.container__faq{
+  background: linear-gradient(180deg, #f0f9ff, #ffffff);
+  color: var(--ink);
+  padding: clamp(24px,4vw,48px) 16px;
+}
+
+.hero__faq{
+  max-width: var(--maxw);
+  margin: 0 auto 14px;
+  text-align: center;
+}
+.title__faq{
+  margin: 0 0 6px;
+  font-size: clamp(22px,4vw,34px);
+  font-weight: 900;
+}
+.subtitle__faq{
+  margin: 0 auto;
+  max-width: 62ch;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.faq{
+  max-width: var(--maxw);
+  margin: 16px auto 0;
+}
+
+.accordion-container{
+  display: grid;
+  gap: 10px;
+}
+
+/* Accordion item */
+.accordion-item{
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: clip; /* smooth corners */
+}
+
+.accordion-summary{
+  list-style: none; /* hide native triangle in some browsers */
+  cursor: pointer;
+  padding: 16px 18px;
+  font-weight: 800;
+  position: relative;
+  display: flex; align-items: center; gap: 10px;
+}
+.accordion-summary::-webkit-details-marker{ display:none; }
+
+/* Chevron */
+.accordion-summary::after{
+  content: "›";
+  margin-left: auto;
+  transform: rotate(90deg);
+  transition: transform .2s ease;
+  color: var(--blue-600);
+  font-weight: 900;
+}
+.accordion-item[open] .accordion-summary::after{
+  transform: rotate(-90deg);
+}
+
+.accordion-summary:hover{
+  background: #fff;
+}
+.accordion-summary:focus-visible{
+  outline: 2px solid var(--blue-600);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Content */
+.accordion-content{
+  padding: 0 18px 16px 18px;
+  color: var(--muted);
+  line-height: 1.65;
+  border-top: 1px solid var(--bd);
+  background:
+    linear-gradient(0deg, #fff, #fff) padding-box,
+    linear-gradient(90deg, transparent, rgba(37,99,235,.25), transparent) border-box;
+}
+
+/* Subtle open animation */
+.accordion-item[open] .accordion-content{
+  animation: faqFade .18s ease-in;
+}
+@keyframes faqFade{
+  from{ opacity: .7; transform: translateY(-2px); }
+  to  { opacity: 1;  transform: translateY(0); }
+}

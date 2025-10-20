@@ -1,0 +1,169 @@
+/* =========================
+   Resuma — About.css
+   Blue • White • Clean
+   ========================= */
+:root{
+  --blue-600:#1d4ed8;
+  --blue-500:#2563eb;
+  --blue-400:#3b82f6;
+  --blue-100:#dbeafe;
+  --ink:#0f172a;
+  --muted:#475569;
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --bd:rgba(15,23,42,.08);
+  --radius:14px;
+  --shadow:0 12px 26px rgba(15,23,42,.08);
+  --maxw:1200px;
+}
+
+/* Shell */
+.container__about{
+  background: linear-gradient(180deg, #f0f9ff, #ffffff);
+  color: var(--ink);
+  padding: clamp(24px,4vw,48px) 16px;
+}
+
+
+.hero__about, .title__about__showcase, .subtitle__about__showcase {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.title__about, .title__about__showcase {
+  margin: 0 0 8px;
+  font-size: clamp(22px,4vw,34px);
+  font-weight: 900;
+  letter-spacing: .2px;
+}
+
+
+.subtitle__about, .subtitle__about__showcase {
+  margin: 0 auto;
+  max-width: 62ch;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+
+/* Features + Steps wrapper */
+.showcase__about{
+  max-width: var(--maxw);
+  margin: clamp(18px,4vw,28px) auto 0;
+}
+
+
+
+/* Cards grid */
+.about-display{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: clamp(12px,2vw,18px);
+}
+
+
+/* Card */
+.about-card{
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  transition: transform .18s ease, box-shadow .22s ease, border-color .2s ease;
+}
+
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(37,99,235,.15);
+  border-color: rgba(37,99,235,.25);
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: end;
+}
+
+
+.about-icon{
+  display: inline-grid; 
+  place-items: center;
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, var(--blue-100), #eff6ff);
+  color: var(--blue-600);
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+
+.about-title {
+  margin: 0 0 6px;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+
+.about-desc {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: .95rem;
+}
+
+
+/* Stats row */
+.stats__about{
+  list-style: none;
+  display: flex; gap: 14px; flex-wrap: wrap;
+  padding: 0; margin: clamp(12px,3vw,18px) 0 0;
+  justify-content: center;
+}
+
+
+.stat__about{
+  background: #fff;
+  border: 1px solid var(--bd);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 10px 14px;
+  min-width: 180px;
+  text-align: center;
+}
+
+
+.value__about{
+  display:block; font-weight: 900; font-size: 1.1rem; color: var(--ink);
+}
+
+
+.text__about{
+  display:block; color: var(--muted); font-size: .9rem;
+}
+
+
+/* Numbered steps: add round number badge */
+.about-card .about-meta{
+  position: absolute; /* we’ll make the card relative */
+  right: 0;
+  inset: 12px auto auto 12px;
+  background: var(--blue-600);
+  color:#fff;
+  width: 28px; height: 28px;
+  border-radius: 999px;
+  display: grid; place-items: center;
+  font-size: .9rem; font-weight: 800;
+}
+
+
+.about-card{ 
+    position: relative; 
+} /* enable the badge positioning */
+
+
+/* Responsive niceties */
+@media (max-width: 820px){
+  .stats__about{ justify-content: center }
+}
