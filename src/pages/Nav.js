@@ -1,7 +1,12 @@
 import "../css/Nav.css";
 
 import { useState } from "react";
-import { CiMenuKebab, CiSearch, CiUser } from "react-icons/ci";
+
+// SVGS
+import { CiMenuKebab } from "react-icons/ci";
+import { PiStudent } from "react-icons/pi";
+import { FiCreditCard, FiMessageCircle, FiMail, FiHelpCircle } from "react-icons/fi";
+
 
 function Navbar() {
       
@@ -16,9 +21,10 @@ function Navbar() {
         </h3>
         <div className="links__nav">
             <a href="#about">About</a>
-            <a href="#services">Services</a>
             <a href="#subscriptions">Subscriptions</a>
+            <a href="#reviews">Reviews</a>
             <a href="#contact">Contact</a>
+            <a href="#faq" aria-label="FAQ">FAQ</a>
         </div>
          <button 
             id="menu-btn" 
@@ -29,8 +35,11 @@ function Navbar() {
             <CiMenuKebab />
         </button>
         <div id="supple-links__nav" className={`supple-links ${menuOpen ? "is-open" : ""}`} aria-hidden={!menuOpen}>
-            <a href="#search" aria-label="Search" ><CiSearch /></a>
-            <a href="#profile" aria-label="Profile" ><CiUser /></a>
+             <a href="#about" aria-label="About"><PiStudent /></a>
+            <a href="#subscriptions" aria-label="Subscriptions"><FiCreditCard /></a>
+            <a href="#reviews"><FiMessageCircle /></a>
+            <a href="#contact" aria-label="Contact"><FiMail /></a>
+            <a href="#faq" aria-label="FAQ"><FiHelpCircle /></a>
         </div>
       </header>
       

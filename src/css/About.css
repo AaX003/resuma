@@ -1,6 +1,5 @@
 /* =========================
-   Resuma — About.css
-   Blue • White • Clean
+   About.css
    ========================= */
 :root{
   --blue-600:#1d4ed8;
@@ -146,7 +145,7 @@
 
 /* Numbered steps: add round number badge */
 .about-card .about-meta{
-  position: absolute; /* we’ll make the card relative */
+  position: absolute; 
   right: 0;
   inset: 12px auto auto 12px;
   background: var(--blue-600);
@@ -157,13 +156,13 @@
   font-size: .9rem; font-weight: 800;
 }
 
-
+/* badge positioning */
 .about-card{ 
     position: relative; 
-} /* enable the badge positioning */
+}
 
 
-/* Responsive niceties */
+/* Responsiveness */
 @media (max-width: 820px){
   .stats__about{ justify-content: center }
 }

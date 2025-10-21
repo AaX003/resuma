@@ -1,6 +1,5 @@
 /* ================================
-   Resuma — Subscriptions.css
-   Blue • White • Modern SaaS
+   Subscriptions.css
    ================================ */
 :root{
   --blue-700:#1d4ed8;
@@ -155,7 +154,7 @@
   border: 1px solid rgba(37,99,235,.18);
 }
 
-/* Responsive */
+/* Responsiveness */
 @media (max-width: 860px){
   .subscriptions-display{ grid-template-columns: 1fr; }
 }

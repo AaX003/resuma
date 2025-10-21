@@ -1,6 +1,5 @@
 /* =========================
-   Resuma — Reviews.css
-   Blue • White • Clean
+  Reviews.css
    ========================= */
 :root{
   --blue-700:#1d4ed8;
@@ -126,7 +125,7 @@
   box-shadow: 0 12px 22px rgba(37,99,235,.18);
 }
 
-/* Dots */
+/* Slideshow highlight Dots */
 .dots{
   display: flex; justify-content: center; align-items: center; gap: 8px;
 }

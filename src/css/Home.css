@@ -1,6 +1,5 @@
 /* ================================
-   Resume Builder — Home.css
-   Blue • White • Modern SaaS Vibe
+   Home.css
    ================================ */
 :root {
   --blue-500: #2563eb;
@@ -85,6 +84,7 @@
 
 .subscribe-btn {
   padding: 0.75rem 1.5rem;
+  border: none;
   background: linear-gradient(90deg, var(--blue-500), var(--blue-400));
   color: white;
   font-weight: 600;

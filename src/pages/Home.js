@@ -21,13 +21,7 @@ function Home() {
                     placeholder="Enter Email"
                     required
                 />
-                <a 
-                    href="/auth"
-                    className="subscribe-btn"
-                    type="button"
-                >
-                    Subscribe
-                </a>
+                <button className="subscribe-btn">Subscribe</button>
             </div>
             </div>
         </main>

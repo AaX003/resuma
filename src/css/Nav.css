@@ -1,5 +1,5 @@
 /* ================================
-   Resuma — Nav.css (Blue • White)
+  Nav.css 
    ================================ */
 :root{
   --blue-600:#1d4ed8;
@@ -44,7 +44,7 @@
 /* Desktop links */
 .links__nav{
   margin-left: 12px;
-  display: none;                 /* mobile first */
+  display: none;                
   gap: 14px;
 }
 .links__nav a{
@@ -92,7 +92,7 @@
   display: inline-grid; place-items: center;
   width: 40px; height: 40px;
   border-radius: 10px;
-  color: var(--ink);
+  color: var(--blue-400);
   background: #fff;
   border: 1px solid var(--bd);
   text-decoration: none;
