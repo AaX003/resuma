@@ -54,11 +54,6 @@ function Reviews() {
   const next = useCallback(() => setCurrent((i) => (i + 1) % total), [total]);
   const prev = useCallback(() => setCurrent((i) => (i - 1 + total) % total), [total]);
 
-  // Optional: auto-advance every 6s, pauses on tab switch
-  useEffect(() => {
-    const id = setInterval(next, 6000);
-    return () => clearInterval(id);
-  }, [next]);
 
   const { rating, quote, reviewer, locale } = reviews[current];
 
