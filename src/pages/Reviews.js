@@ -1,5 +1,5 @@
 import "../css/Reviews.css";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { IoMdStar } from "react-icons/io";
 
 function Reviews() {
